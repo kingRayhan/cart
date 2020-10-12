@@ -2,15 +2,22 @@
 
 namespace App\Models;
 
+use App\Traits\HasParent;
 use App\Traits\OrderAble;
 use App\Traits\PrimaryKeySlug;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Query\Builder;
+
 
 class Category extends Model
 {
-    use HasFactory, OrderAble, PrimaryKeySlug;
+    use HasFactory,HasParent,OrderAble,PrimaryKeySlug;
+
+    public function scopeOrdered(Builder $query, $orientation = 'ASC')
+    {
+        return $query->orderBy('order', $orientation);
+    }
 
     public function children()
     {

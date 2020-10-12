@@ -15,12 +15,12 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::query()
-            ->latest()
+            ->parents()
+            ->orderBy('order', 'ASC')
             ->paginate(5);
 
         return CategoryResource::collection($categories);
     }
-
 
     public function store()
     {
