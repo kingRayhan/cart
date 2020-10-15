@@ -19,16 +19,53 @@
 
       <div class="navbar-menu">
         <div class="navbar-end">
-          <div class="navbar-item">
-            <div class="buttons">
-              <a class="button is-primary">
-                <strong>Sign up</strong>
-              </a>
-              <a class="button is-light"> Log in </a>
+          <template v-for="category in categories">
+            <NuxtLink
+              v-if="!category.children.length"
+              class="navbar-item"
+              :to="url(category.slug)"
+              :key="category.id"
+            >
+              {{ category.name }}
+            </NuxtLink>
+
+            <div
+              v-if="category.children.length"
+              class="navbar-item has-dropdown is-hoverable"
+              :key="category.id"
+            >
+              <NuxtLink class="navbar-link" :to="url(category.slug)">
+                {{ category.name }}
+              </NuxtLink>
+
+              <div class="navbar-dropdown">
+                <NuxtLink
+                  v-for="subCategory in category.children"
+                  class="navbar-item"
+                  :key="subCategory.id"
+                  :to="url(subCategory.slug)"
+                >
+                  {{ subCategory.name }}
+                </NuxtLink>
+              </div>
             </div>
-          </div>
+          </template>
         </div>
       </div>
     </nav>
   </div>
 </template>
+
+<script>
+import { mapGetters } from 'vuex'
+export default {
+  computed: {
+    ...mapGetters(['categories']),
+  },
+  methods: {
+    url(slug) {
+      return { name: 'categories-slug', params: { slug } }
+    },
+  },
+}
+</script>

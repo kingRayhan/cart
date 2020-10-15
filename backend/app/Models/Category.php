@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
-    use HasFactory,HasParent,OrderAble,PrimaryKeySlug;
+    use HasFactory, HasParent, OrderAble, PrimaryKeySlug;
 
     public function scopeOrdered(Builder $query, $orientation = 'ASC')
     {
@@ -22,5 +22,10 @@ class Category extends Model
     public function children()
     {
         return $this->hasMany(Category::class, 'parent_id', 'id');
+    }
+
+    public function products()
+    {
+        return $this->belongsToMany(Product::class);
     }
 }

@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Resources\CategoryResource;
 use App\Models\Category;
-use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
@@ -30,6 +29,11 @@ class CategoryController extends Controller
     public function show(Category $category)
     {
         return new CategoryResource($category);
+    }
+
+    public function productsOfCategory(Category $category)
+    {
+//        return ProductIndexResource::collection($category->products->paginate(10));
     }
 
     public function update()
