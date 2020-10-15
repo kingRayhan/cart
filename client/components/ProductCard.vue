@@ -1,21 +1,20 @@
 <template>
   <div class="card">
     <div class="card-image">
-      <figure class="image is-4by3">
-        <img
-          src="https://bulma.io/images/placeholders/1280x960.png"
-          alt="Placeholder image"
-        />
-      </figure>
+      <NuxtLink :to="link">
+        <figure class="image is-4by3">
+          <img
+            src="https://bulma.io/images/placeholders/1280x960.png"
+            alt="Placeholder image"
+          />
+        </figure>
+      </NuxtLink>
     </div>
 
     <div class="card-content">
       <div class="content">
         <h4>
-          <NuxtLink
-            :to="{ name: 'products-slug', params: { slug: product.slug } }"
-            >{{ product.title }}</NuxtLink
-          >
+          <NuxtLink :to="link">{{ product.title }}</NuxtLink>
         </h4>
         <p>Lorem ipsum dolor sit amet.</p>
         <div class="mt-4">
@@ -32,5 +31,10 @@
 <script>
 export default {
   props: ['product'],
+  computed: {
+    link() {
+      return { name: 'products-slug', params: { slug: this.product.slug } }
+    },
+  },
 }
 </script>

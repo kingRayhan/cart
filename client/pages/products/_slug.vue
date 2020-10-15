@@ -14,8 +14,14 @@
             {{ product.body }}
 
             <hr />
-
-            <span class="tag is-rounded is-medium">SHow</span>
+            <NuxtLink
+              v-for="category in product.categories"
+              :key="category.id"
+              class="tag is-rounded is-medium mr-2"
+              :to="{ name: 'categories-slug', params: { slug: category.slug } }"
+            >
+              {{ category.name }}
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -25,6 +31,9 @@
 
 <script>
 export default {
+  data() {
+    return { product: null }
+  },
   async asyncData({ params, $axios, error }) {
     try {
       const { data } = await $axios.$get(`products/${params.slug}`)
