@@ -2,25 +2,25 @@
 
 namespace App\Models;
 
-use App\Scoper\Scoper;
+use App\Scoper\CanBeScope;
+use App\Traits\HasPrice;
 use App\Traits\OrderAble;
 use App\Traits\PrimaryKeySlug;
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
 class Product extends Model
 {
-    use HasFactory, PrimaryKeySlug, OrderAble;
+    use HasFactory, PrimaryKeySlug, OrderAble, CanBeScope, HasPrice;
 
     public function categories()
     {
         return $this->belongsToMany(Category::class);
     }
 
-    public function scopeWithScopes(Builder $builder, $scopes = [])
+    public function variations()
     {
-        $scoper = new Scoper(request());
-        return $scoper->apply($builder, $scopes);
+        return $this->hasMany(ProductVariation::class);
     }
 }

@@ -1,1 +1,9 @@
-@import '~bulma';
+.select select option:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  color: #a7a7a7;
+}
+
+button:focus {
+  outline: none;
+}

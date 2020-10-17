@@ -9,7 +9,7 @@ class ProductIndexResource extends JsonResource
     /**
      * Transform the resource into an array.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return array
      */
     public function toArray($request)
@@ -19,7 +19,7 @@ class ProductIndexResource extends JsonResource
             'url' => route('products.show', $this),
             'title' => $this->title,
             'slug' => $this->slug,
-            'price' => $this->price,
+            'price' => $this->formattedPrice,
             'created_at' => $this->created_at->diffForHumans()
         ];
     }

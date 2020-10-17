@@ -1,9 +1,16 @@
 <template>
-  <div class="section">
-    <div class="container">
-      <div class="columns is-multiline">
-        <div class="column is-3" v-for="product in products" :key="product.id">
-          <ProductCard :product="product" />
+  <div>
+    <FeaturedCarousel class="mb-12" />
+    <div class="section">
+      <div class="container">
+        <div class="columns is-multiline">
+          <div
+            class="column is-3"
+            v-for="product in products"
+            :key="product.id"
+          >
+            <ProductCard :product="product" />
+          </div>
         </div>
       </div>
     </div>
