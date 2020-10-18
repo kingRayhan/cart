@@ -2,40 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1421dd06-9d15-46cc-8f6a-687edfb44a2e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/AppHelpers/Money.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/Category/MainCategoriesResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/Product/ProductVariationResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/ProductVariation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/ProductVariationType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Stock.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Scoper/CanBeScope.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Traits/HasPrice.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_16_201307_create_product_variation_types_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_16_201308_create_product_variations_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_17_101831_create_stocks_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Product/ProductIndexResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/ProductIndexResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Product/ProductSingleResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/ProductSingleResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Scoper/Scoper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Scoper/Scoper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Scoper/Scopes/CategoryScope.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Scoper/Scopes/CategoryScope.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Order.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_18_181929_create_orders_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_18_182347_create_product_variation_order_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_18_193818_create_products_variation_stock_view.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/stock.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Product/ProductVariationResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/ProductVariationResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/ProductVariation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ProductVariation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/artisan" beforeDir="false" afterPath="$PROJECT_DIR$/artisan" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_15_015450_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_15_015450_create_products_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/assets/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../client/assets/styles/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/components/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/components/Navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../client/components/Navbar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/components/ProductCard.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/nuxt.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../client/pages/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../client/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../diagram.diagram" beforeDir="false" afterPath="$PROJECT_DIR$/../diagram.diagram" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../diagram.diagram:Zone.Identifier" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../diagram.png:Zone.Identifier" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,6 +186,10 @@
       <workItem from="1602758837960" duration="13985000" />
       <workItem from="1602834396340" duration="1334000" />
       <workItem from="1602857519515" duration="11295000" />
+      <workItem from="1602944497144" duration="1341000" />
+      <workItem from="1602959295213" duration="1151000" />
+      <workItem from="1603020183225" duration="6733000" />
+      <workItem from="1603038460458" duration="887000" />
     </task>
     <servers />
   </component>
@@ -220,10 +200,26 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="336" y="366" key="#SQL_Dialects" timestamp="1603028227507">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="336" y="366" key="#SQL_Dialects/0.0.1920.1050@0.0.1920.1050" timestamp="1603028227507" />
+    <state x="552" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603028235015">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1603028235015" />
+    <state x="738" y="327" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603028196156">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="738" y="327" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1603028196156" />
     <state x="765" y="207" key="#com.intellij.ide.util.MemberChooser" timestamp="1602900894854">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="765" y="207" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1602900894854" />
+    <state x="640" y="261" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1603037413108">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="640" y="261" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1603037413108" />
     <state x="654" y="38" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1602512088416">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -248,9 +244,9 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="533" height="446" key="SwitcherDM/0.0.1920.1050@0.0.1920.1050" timestamp="1602901262311" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1602908369502">
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1603038371005">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1602908369502" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1603038371005" />
   </component>
 </project>
